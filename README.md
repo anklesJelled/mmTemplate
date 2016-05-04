@@ -31,6 +31,8 @@ Not in this repo.
 
 - /design/design.ai
 - /design/graphics/favicon.ai
+- Images for `slideshow` CSS module.
+- Images for `social` CSS module.
 
 
 Favicons
@@ -40,3 +42,11 @@ Create an SVG file from favicon.ai and using it here: [Real Favicon Generator](h
 - /browserconfig.xml
 - /manifest.json
 - /safari-pinned-tab.svg
+
+Javascript
+-----
+jQuery is needed to display the viewport dimensions at the bottom-right of the page. I like seeing the dimensions while I am building a site but then it gets removed for production. Therefore, the jQuery script link in layout.erb can be commented-out (removed) after development.
+
+jQuery is required for the Back-To-Top button that appears in the bottom-right corner of the screen after scrolling down.
+
+The navigation doesn't require jQuery.
