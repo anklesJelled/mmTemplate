@@ -1,0 +1,17 @@
+// Error Page Styles
+
+.error401, .error403, .error404, .error500 {
+    article {
+        line-height: 1.4;
+        h1 {
+            background: $cTrim;
+            border-radius: 10px;
+            @include boxShadow(2px, 2px, 4px, #999);
+            font-size: 50px;
+            text-align: center;
+        }
+        ul {
+            margin: 0 0 0 2em;
+        }
+    }
+}

@@ -1,0 +1,34 @@
+// HTML
+/*
+
+<div id="brand">
+    <a href="#" target="_blank">Site by You</a>
+</div>
+
+*/
+
+#brand {
+    float: right;
+    margin-top: 100px;
+    &:hover {
+        background: #222;
+        border-bottom: 1px #FFF solid;
+        border-radius: 5px;
+    }
+    a {
+        display: block;
+        padding: 10px;
+    }
+}
+
+//========================================================================== States
+/*
+
+#brand {
+    font-size: 0.8em;
+    a {
+        color: #aaa;
+    }
+}
+
+*/

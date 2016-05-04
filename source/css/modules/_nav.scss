@@ -1,0 +1,42 @@
+// HMTL
+/*
+<nav class="headerNav">
+    <a id="navA" href="/">Home</a>
+    <a id="navB" href="/links/">Links</a>
+</nav>
+*/
+
+nav {
+    background: #fff;
+    border-bottom: 3px solid $cTrim;
+    height: 55px;
+    padding: 0 0 0 1em;
+    position: fixed; top: 0; left: 0;
+    width: 100%;
+    z-index: 100;
+    a {
+        border-bottom: 2px solid transparent;
+        display: inline-block;
+        padding: 0 1em;
+        line-height: 30px;
+        margin: 0.5em 1em 0 0;
+        transition:         border-bottom 0.5s, border-radius 0.4s;
+        -moz-transition:    border-bottom 0.5s, border-radius 0.4s;
+        -o-transition:      border-bottom 0.5s, border-radius 0.4s;
+        -webkit-transition: border-bottom 0.5s, border-radius 0.4s;
+        &:hover {
+            color: $cLinkHover;
+            border-bottom: 2px solid $cLink;
+        }
+    }
+}
+
+// Formats the navigation based on a body CLASS
+.index #navA, .bodyClass #navB, .bodyClass #navC, .bodyClass #navD, .bodyClass #navE {
+    border-bottom: 2px solid $cLinkHover;
+    border-right: 1px solid transparent; //needed
+    border-left: 1px solid transparent; //needed
+    &:hover {
+        border-bottom: 2px solid $cLink;
+    }
+}

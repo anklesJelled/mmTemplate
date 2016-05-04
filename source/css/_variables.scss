@@ -1,0 +1,28 @@
+//========================================================================== Variables
+$cLink: #1535a9;        //blue
+$cLinkHover: #555;
+$cSelection: #b3d4fc;
+$cText: #000;
+$cTrim: #ff6600;        //orange
+
+
+//========================================================================== Mixins
+$shadHori:  1px;
+$shadVert:  1px;
+$shadBlur:  5px;
+$shadColo:  #000;
+@mixin boxShadow($shadHori, $shadVert, $shadBlur, $shadColo) {
+    -webkit-box-shadow: $shadHori $shadVert $shadBlur $shadColo;
+    -moz-box-shadow:    $shadHori $shadVert $shadBlur $shadColo;
+    box-shadow:         $shadHori $shadVert $shadBlur $shadColo;
+}
+//      @include boxShadow(1px, 2px, 7px, #3450f4);
+
+$propA:width 2s;
+@mixin trans($propA) {
+    transition:         $propA;
+    -moz-transition:    $propA;
+    -webkit-transition: $propA;
+    -o-transition:      $propA;
+}
+//      @include trans(color 1s);

@@ -1,0 +1,228 @@
+// Responsive Nav - http://responsive-nav.com/
+// - Add responsive-nav.js to /js/
+// - Make sure that this module is imported into main.scss
+
+//================================================================ HTML
+/*
+<div id="foo" class="nav-collapse">
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Projects</a></li>
+    <li><a href="#">Blog</a></li>
+  </ul>
+</div>
+
+*/
+
+//================================================================ Before closing </body> tag
+/*
+
+<script>var navigation = responsiveNav(".nav-collapse", {transition: 500});</script>
+
+// All the settings
+<script>
+    var navigation = responsiveNav(".nav-collapse", {
+        animate: true,                    // Boolean: Use CSS3 transitions, true or false
+        transition: 500,                  // Integer: Speed of the transition, in milliseconds
+        // label: "Menu",                    // String: Label for the navigation toggle
+        insert: "before",                  // String: Insert the toggle before or after the navigation
+        // customToggle: "",                 // Selector: Specify the ID of a custom toggle
+        // closeOnNavClick: false,           // Boolean: Close the navigation when one of the links are clicked
+        // openPos: "relative",              // String: Position of the opened nav, relative or static
+        // navClass: "nav-collapse",         // String: Default CSS class. If changed, you need to edit the CSS too!
+        //navActiveClass: "js-nav-active",  // String: Class that is added to <html> element when nav is active
+        //jsClass: "js",                    // String: 'JS enabled' class which is added to <html> element
+        //init: function(){},               // Function: Init callback
+        //open: function(){},               // Function: Open callback
+        //close: function(){}               // Function: Close callback
+    });
+</script>
+
+*/
+
+//========================================================================== Default CSS (DO NOT CHANGE)
+
+.nav-collapse ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: block;
+    list-style: none;
+}
+
+.nav-collapse li {
+    width: 100%;
+    display: block;
+}
+
+.js .nav-collapse {
+    clip: rect(0 0 0 0);
+    max-height: 0;
+    position: absolute;
+    display: block;
+    overflow: hidden;
+    zoom: 1;
+}
+
+.nav-collapse.opened {max-height: 9999px;}
+
+.nav-toggle {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.fixed {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.nav-collapse, .nav-collapse * {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+
+
+//========================================================================== Toggle Button
+.nav-toggle {
+    position: fixed;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-decoration: none;
+    text-indent: -999px;
+    position: relative;
+    overflow: hidden;
+    width: 50px;
+    height: 50px;
+    float: right;
+}
+
+.nav-toggle:before {
+    background: #fff;
+    border-radius: 25px;
+    color: $cLink;
+    // content: '\2630'; // Hamburger
+    // content: "≡";
+    content: 'Menu';
+    font-family: sans-serif; //make sure the X is in the center if you change this.
+    font-style: normal; font-weight: normal; font-variant: normal;
+    font-size: 14px;
+    line-height: 50px; //coordinate with other rules
+    speak: none;
+    text-align: center;
+    text-indent: 0;
+    text-transform: none;
+    width: 100%;
+    position: absolute; top: 0; left: 0;
+}
+
+//The toggle button when menu is expanded
+.nav-toggle.active::before {
+    background: #fff;
+    border-radius: 25px;
+    content:"x";
+    font-size: 24px;
+    margin-bottom: 1em;
+}
+
+
+
+
+//========================================================================== Menu Items (When Collapsed)
+//Style the navigation for small widths, then use media queries below to change it at larger widths.
+.nav-collapse {
+    text-align: center;
+    ul {
+        float: left; //needed
+        li {
+            float: left; //needed
+            padding: 0 0.5em;
+            width: 50%;
+        }
+    }
+    a {
+        background: #fff;
+        border-radius: 1em;
+        -webkit-box-shadow: inset 2px 2px 3px #000, inset -2px -2px 0 #444;
+        -moz-box-shadow:    inset 2px 2px 3px #000, inset -2px -2px 0 #444;
+        box-shadow:         inset 2px 2px 3px #000, inset -2px -2px 0 #444;
+        color: $cLink;
+        display: block;
+        // font-weight: bold;
+        margin: 0.5em 0;
+        padding: 1em 0;
+        // text-shadow: 3px 3px 2px #000;
+        @include trans(background 0.4s);
+        width: 100%;
+        &:hover {
+            background: #999;
+        }
+    }
+}
+
+
+
+
+//========================================================================== Menu Items (When NOT Collapsed)
+/*
+//Default: Hide the toggle button at 40em and greater
+@media screen and (min-width: 40em) {
+    .js .nav-collapse {position: relative;}
+    .js .nav-collapse.closed {max-height: none;}
+    .nav-toggle {display: none;}
+}
+*/
+@media screen and (min-width: 767px) {
+    .js .nav-collapse {position: relative;}
+    .js .nav-collapse.closed {max-height: none;}
+    .nav-toggle {display: none;}
+    .nav-collapse {
+        font-size: 120%;
+        ul {
+            float: none;
+            li {
+                display: inline-block;
+                float: none;
+                width: auto;
+                a {
+                    background: inherit;
+                    display: block;
+                    border-radius: 0;
+                    @include boxShadow(0, 0, 0, transparent);
+                    padding: 0;
+                    width: auto;
+                    &:hover {
+                        background: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+
+.nav-collapse {
+    ul {
+        li {
+            width: 100%;
+        }
+    }
+}
+
+} //end of query

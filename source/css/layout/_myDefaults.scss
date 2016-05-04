@@ -1,0 +1,114 @@
+a {
+    text-decoration: none;
+    img {
+        border: 0;
+    }
+}
+
+a, a:visited, a:focus, a:active, a:hover {outline: none !important;}
+
+ul, ol {
+    list-style-position: inside;
+    margin: 0;
+    padding: 0;}
+
+img, object, embed {max-width: 100%;}
+
+figure {
+    position: relative;
+    img {
+        width: 100%;
+    }
+}
+
+// Force a vertical scrollbar to prevent a jumpy page
+// http://css-tricks.com/snippets/css/momentum-scrolling-on-ios-overflow-elements/ 
+html {
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;}
+
+
+// Make buttons play nice in IE
+button {
+  width: auto;
+  overflow: visible;}
+
+// Base Template
+.c0, .c1, .c2, .c3, .c4, .c5, .c6, .c7, .c8, .c9, .c10, .c11, .c12 {margin-right:0;float:left;min-height:1px;}
+.row {width:100%;margin:0 auto;overflow:hidden;}
+.row .c0{ width: 0%;visibility:hidden;}
+.row .c1{ width: 8.33%;}
+.row .c2{ width: 16.66%;}
+.row .c3{ width: 25%;}
+.row .c4{ width: 33.33%;}
+.row .c5{ width: 41.66%;}
+.row .c6{ width: 50%;}
+.row .c7{ width: 58.33%;}
+.row .c8{ width: 66.66%;}
+.row .c9{ width: 75%;}
+.row .c10{width: 83.33%;}
+.row .c11{width: 91.66%;}
+.row .c12{width: 100%;}
+
+button, input, select, textarea {color: #222;}
+
+img {
+	height: auto;
+	vertical-align: middle;
+	margin: 0 auto;}
+
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;}
+
+textarea {resize: vertical;}
+
+//========================================================================== IE Specific
+
+//IE Fixes for Responsive SVG Images
+.ie9 img[src*=".svg"] {width: 100%;}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {img[src*=".svg"] {width: 100%;}}
+
+//========================================================================== Mobile Specific
+
+// https://developer.mozilla.org/en-US/docs/Web/CSS/text-size-adjust
+body {
+    min-width: 290px; //Got from responsive-nav.js
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+// Print Styles
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; // Black prints faster
+        box-shadow: none !important;
+        text-shadow: none !important;}
+
+    a, a:visited { text-decoration: underline; }
+
+    a[href]:after { content: " (" attr(href) ")"; }
+
+    abbr[title]:after { content: " (" attr(title) ")"; }
+
+    pre, blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;}
+
+    thead { display: table-header-group; } // h5bp.com/t
+
+    tr, img { page-break-inside: avoid; }
+
+    img { max-width: 100% !important; }
+
+    @page { margin: 0.5cm; }
+
+    p, h2, h3 {
+        orphans: 3;
+        widows: 3; }
+
+    h2, h3 { page-break-after: avoid; }
+}

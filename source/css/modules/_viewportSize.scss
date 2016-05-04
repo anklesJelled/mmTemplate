@@ -1,0 +1,18 @@
+// HTML
+/*
+
+<div class="viewport"><span id="width">x</span> x <span id="height">x</span></div>
+
+*/
+
+.viewport {
+	bottom: 0;
+	color: #000;
+	font-size: 0.8em;
+	opacity: 0.5;
+	position: fixed;
+	right: 4px;
+	#width, #height {
+		color: $cText;
+	}
+}

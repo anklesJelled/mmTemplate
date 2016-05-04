@@ -1,0 +1,108 @@
+// HTML - <head> 
+/*
+
+<script src="/js/responsiveslides.min.js"></script>
+<script>
+    $(function () {
+        $("#slider1").responsiveSlides({
+            timeout: 4000,
+        });
+    });
+</script>
+
+*/
+
+// HTML
+/*
+
+<div class="rslides_container">
+    <ul class="rslides" id="slider1">
+        <li><img src="/img/slides01.jpg" alt=""></li>
+        <li><img src="/img/slides03.jpg" alt=""></li>
+        <li><img src="/img/slides02.jpg" alt=""></li>
+    </ul>
+</div>
+
+*/
+
+.rslides {
+    position:relative;
+    list-style:none;
+    overflow:hidden;
+    width:100%;
+    padding:0;
+    margin:0 auto;
+    max-width:1220px;}
+
+.rslides_container{position:relative;float:left;width:100%;}
+.rslides li{-webkit-backface-visibility:hidden;position:absolute;display:none;width:100%;left:0;top:0;}
+.rslides li:first-child{position:relative;display:block;float:left;}
+.rslides img{display:block;height:auto;float:left;width:100%;border:0;}
+.centered-btns_nav{
+    background:transparent url("/img/slideshowArrows.gif") no-repeat left top;
+    border-radius: 0.5em;
+    z-index:3;
+    position:absolute;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    top:60%;
+    left:0;
+    opacity:0.2;
+    text-indent:-9999px;
+    overflow:hidden;
+    text-decoration:none;
+    height:61px;
+    width:38px;
+    margin-top:-45px;
+    @include trans(opacity 0.5s);}
+
+.centered-btns_nav:hover{opacity:0.7;}
+.centered-btns_nav:active{opacity:1.0;}
+.centered-btns_nav.next{left:auto;background-position:right top;right:0;}
+.centered-btns_nav:focus{outline:none;}
+.centered-btns_tabs{margin-top: 10px;text-align: center;}
+.centered-btns_tabs li {
+    display:inline;
+    float:none;
+    _float:left;
+    *float:left;
+    margin-right: 25px;}
+
+.centered-btns_tabs a{
+    text-indent: -9999px;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #ccc;
+    background: rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    _display: block;
+    *display: block;
+    -webkit-box-shadow: inset 0 0 2px 0 rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: inset 0 0 2px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 0 2px 0 rgba(0, 0, 0, 0.3);
+    // Button Diameters ~K
+    width: 25px;
+    height:15px;}
+
+.centered-btns_here a{
+    background: #222;
+    background: rgba(0, 0, 0, 0.8);}
+
+//========================================================================== States
+
+//The slideshow must be wrapped in a div with this ID
+//#slideshow { max-width: 1200px; }
+
+/*
+
+.rslides {
+    @include boxShadow(1px, 1px, 5px, #000000);
+    max-width:1220px;}
+
+.rslides_container{ margin:1em 0 0.5em 0; }
+
+.centered-btns_tabs a {
+    // Button Diameters ~K
+    width: 25px;
+    height:15px;}
+
+*/

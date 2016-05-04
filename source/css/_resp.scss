@@ -1,0 +1,78 @@
+// Responsive Width Setup
+$widthD:  480px;
+$widthC:  767px;
+$widthB:  979px;
+$widthA: 1220px;
+
+// An "argument" that gets overwritten
+$level:a;
+
+@mixin colWidths($level) {
+   .#{$level}0 {width: 0%;display:none !important;visibility:hidden;}
+   .#{$level}1 {width: 8.33%;}
+   .#{$level}2{ width: 16.66%;}
+   .#{$level}3{ width: 25%;}
+   .#{$level}4{ width: 33.33%;}
+   .#{$level}5{ width: 41.66%;}
+   .#{$level}6{ width: 50%;}
+   .#{$level}7{ width: 58.33%;}
+   .#{$level}8{ width: 66.66%;}
+   .#{$level}9{ width: 75%;}
+   .#{$level}10{width: 83.33%;}
+   .#{$level}11{width: 91.66%;}
+   .#{$level}12{width: 100%;}
+}
+
+@-ms-viewport {width: device-width;}
+
+//========================================================================== E - 480
+@media (max-width: $widthD) {
+
+.row {@include colWidths(e);}
+
+//---------------------------------------- layout
+
+
+//---------------------------------------- Page Specific
+
+} //end of query
+
+//========================================================================== D - 481-767
+@media (min-width: $widthD+1px) and (max-width: $widthC) {
+
+.row {@include colWidths(d);}
+
+//---------------------------------------- layout
+
+
+//---------------------------------------- Page Specific
+
+} //end of query
+
+//========================================================================== C - 768-979 - 
+// Normally this is the default so nothing should go here ~K
+//@media (min-width: 768px) and (max-width: 979px){}
+
+//========================================================================== B - 980-1220
+@media (min-width: $widthB+1px) and (max-width: $widthA) {
+
+.row {@include colWidths(b);}
+
+//---------------------------------------- layout
+
+
+//---------------------------------------- Page Specific
+
+} //end of query
+
+//========================================================================== A - >1220
+@media (min-width: $widthA+1px) {
+
+.row {@include colWidths(a);}
+
+//---------------------------------------- layout
+
+
+//---------------------------------------- Page Specific
+
+} //end of query

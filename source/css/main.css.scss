@@ -1,0 +1,80 @@
+@charset "utf-8";
+
+@import
+"variables",
+"layout/clearfix",
+"layout/errorPages",
+// "layout/font",
+"layout/hide",
+"layout/myDefaults",
+"layout/normalize",
+"modules/backToTop",
+"modules/brand",
+"modules/btn",
+// "modules/nav",
+"modules/navResp",
+"modules/slideshow",
+"modules/social",
+"modules/viewportSize";
+
+//========================================================================== Base
+.clearBoth{clear: both;}
+.taJ{text-align: justify;}
+.taL{text-align: left;}
+.taR{text-align: right;}
+.taC{text-align: center;}
+
+hr { 
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 0 0 0.5em 0;
+    padding: 0;}
+
+::-moz-selection{background: $cSelection; text-shadow: none;}
+::selection     {background: $cSelection; text-shadow: none;}
+
+html {font-size: 16px;}
+
+body {
+    background: #aaa url('/img/bg.jpg');
+    cursor: default;
+    color: $cText;
+    font: 100%/1.4 'Open Sans', Arial, Helvetica, sans-serif;
+    text-align: center;
+    a {
+        color: $cLink;
+        &:hover {
+            color: $cLinkHover;
+        }
+    }
+}
+
+h1 {font-size: 2.0em;}
+h2 {font-size: 1.5em;}
+h3 {font-size: 1.2em;}
+
+ul {padding: 0;}
+
+
+
+//========================================================================== Layout
+.container {
+    margin: 1em;
+    padding: 0;}
+
+.row {
+    margin: 0 auto;
+    max-width: 1600px;
+    padding: 0.2em 0;}
+
+
+
+
+//========================================================================== Page Specific
+
+
+
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ Import
+@import "resp";
