@@ -38,17 +38,15 @@
 </head>
 <body id="top" class="<%= current_page.data.bodyClass %>">
 <div class="container">
-    <div class="row">
-        <nav class="nav-collapse">
-            <ul>
-                <li id="a"><a href="#">Link</a></li>
-                <li id="b"><a href="#">Link</a></li>
-                <li id="c"><a href="#">Link</a></li>
-                <li id="d"><a href="#">Link</a></li>
-            </ul>
-        </nav>
-    </div>
-    <%= yield %>
+    <nav class="nav-collapse">
+        <ul>
+            <li id="a"><a href="#">Link</a></li>
+            <li id="b"><a href="#">Link</a></li>
+            <li id="c"><a href="#">Link</a></li>
+            <li id="d"><a href="#">Link</a></li>
+        </ul>
+    </nav>
+<%= yield %>
 </div> <!--end container-->
 <div class="viewport"><span id="width">x</span> x <span id="height">x</span></div>
 <a href="#" id="backToTop">^</a>
@@ -74,7 +72,7 @@
 </script>-->
 
 <!--Viewport Size for Testing-->
-<!--<script type="text/javascript">
+<script type="text/javascript">
 $(document).ready(function() {showViewportSize();});
 $(window).resize(function() {showViewportSize();});
 function showViewportSize() {
@@ -83,7 +81,7 @@ function showViewportSize() {
     $('#width').text(the_width);
     $('#height').text(the_height);
 }
-</script>-->
+</script>
 
 <script src="/js/plugins.js"></script>
 
