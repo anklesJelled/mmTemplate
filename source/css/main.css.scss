@@ -33,7 +33,8 @@ hr {
 html {font-size: 16px;}
 
 body {
-    background: #aaa url('/img/bg.jpg');
+    background: #ccc;
+    // background: #aaa url('/img/bg.jpg');
     cursor: default;
     color: $cText;
     font: 100%/1.4 'Open Sans', Arial, Helvetica, sans-serif;
@@ -43,6 +44,9 @@ body {
         &:hover {
             color: $cLinkHover;
         }
+    }
+    figure {
+        margin: 0;
     }
 }
 
@@ -61,7 +65,17 @@ ul {padding: 0;}
     padding: 0;}
 
 //========================================================================== Page Specific
-
+.index {
+    figure {
+        &.lightbox {
+            img {
+                cursor: -webkit-zoom-in;
+                cursor: -moz-zoom-in;
+                width: 72px;
+            }
+        }
+    }
+}
 
 
 //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ Import
