@@ -6,9 +6,32 @@ My Custom [Middleman](https://middlemanapp.com/) Project Template. This is not m
 
 My Development Environment
 -----
-- [Linux Mint](https://linuxmint.com/) 17.x - Operating System
-- [RVM](https://rvm.io/) - install newer Ruby version
-- [SASS](http://sass-lang.com/) - CSS Compiler
+- Operating System: [Linux Mint](https://linuxmint.com/) 17.3 & 18.1
+- Ruby Control: [RVM](https://rvm.io/)
+- CSS Compiler: [SASS](http://sass-lang.com/)
+
+### Setup
+Steps to setting up this development environment from a fresh install of Linux Mint 18.1
+
+- Install [RVM](https://rvm.io/) - instructions on website.
+	- Use RVM to install a version of ruby. (2.4)
+- `sudo apt-get install build-essential`
+- `gem update --system`
+- `gem update`
+- `sudo apt-get install git`
+	- `git config --global user.name "Joe"`
+	- `git config --global user.email "joe@example.com"`
+- Git Clone this repository
+- Git Clone /sites/ repository (Bitbucket)
+- Install via Software Manager: Sublime Text, Meld
+- `gem install bundle`
+- `gem install middleman` - after this: compare the version of middleman each site is using (Gemfile) to see if there is an updated version.
+- `bundle install`
+- Install [Node.js](https://nodejs.org/en/download/package-manager/) - v7 worked in Linux Mint 18.1
+- Customize Terminal with ~/.bashrc file.
+- Setup `git prep` alias: `prep = "!sh -c clear; git status; git log -1'"
+- Done!
+- `bundle exec middleman` - cd to the site directory and run this. Should work now.
 
 
 /Gemfile
