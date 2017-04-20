@@ -38,15 +38,17 @@
 </head>
 <body id="top" class="<%= current_page.data.bodyClass %>">
 <div class="container">
-    <nav class="nav-collapse">
-        <ul>
-            <li id="a"><a href="#">Link</a></li>
-            <li id="b"><a href="#">Link</a></li>
-            <li id="c"><a href="#">Link</a></li>
-            <li id="d"><a href="#">Link</a></li>
-        </ul>
-    </nav>
+<nav class="nav-collapse">
+    <ul>
+        <li id="a"><a href="#">Link</a></li>
+        <li id="b"><a href="#">Link</a></li>
+        <li id="c"><a href="#">Link</a></li>
+        <li id="d"><a href="#">Link</a></li>
+    </ul>
+</nav>
+<article>
 <%= yield %>
+</article>
 </div> <!--end container-->
 <div class="viewport"><span id="width">x</span> x <span id="height">x</span></div>
 <a href="#" id="backToTop">^</a>
