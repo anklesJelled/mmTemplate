@@ -30,7 +30,7 @@
 <meta name="msapplication-TileColor" content="#2b5797">
 <meta name="msapplication-TileImage" content="/mstile-144x144.png">
 <meta name="theme-color" content="#333333">
-<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 
 <!--Picturefill-->
 <!--<script>document.createElement( "picture" );</script>-->
@@ -92,6 +92,29 @@ document.body.appendChild(element);}
 if (window.addEventListener)window.addEventListener("load", downloadJSAtOnload, false);
 else if (window.attachEvent)window.attachEvent("onload", downloadJSAtOnload);
 else window.onload = downloadJSAtOnload;
+</script>
+
+<script type="application/ld+json">
+{
+"@context": "http://schema.org",
+"@type": "LocalBusiness",
+"additionalType": "http://www.productontology.org/id/zzzFind",
+"@id": "http://example.com/",
+"name": "zzzBusinessName",
+"logo": "http://example.com/img/logo.png",
+"url": "http://example.com/",
+"telephone": "(111) 222-3333",
+"faxNumber": "(111) 222-3333",
+"naics": "zzzZipCode",
+"address": {
+    "@type": "PostalAddress",
+    "streetAddress": "zzz",
+    "addressLocality": "zzzCity",
+    "addressRegion": "zzzState",
+    "postalCode": "zzzZipCode",
+    "addressCountry": "US"
+}
+}
 </script>
 </body>
 </html>
