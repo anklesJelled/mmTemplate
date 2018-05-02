@@ -6,7 +6,7 @@ My Custom [Middleman](https://middlemanapp.com/) Project Template. This is not m
 
 My Development Environment
 -----
-- Operating System: [Linux Mint](https://linuxmint.com/) 17.3 & 18.1
+- Operating System: [Linux Mint](https://linuxmint.com/)
 - Ruby Control: [RVM](https://rvm.io/)
 - CSS Compiler: [SASS](http://sass-lang.com/)
 
